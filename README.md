@@ -17,10 +17,15 @@ Radius 1 considers the immediate neighbors at offsets −1 and +1. Radius 2 also
 # Repository Contents
 
 configs/      Training and model configuration files
+
 datasets/     Volume loaders
+
 ngps/         Guides, patch sampler, loss functions, and NAFNet
+
 scripts/      Training, validation, inference, evaluation, and plotting
+
 runs/         To save model checkpoints and validation results
+
 outputs/      To save denoised volumes, metrics, and comparison figures
 
 Directory contents and paths are based on the project files and commands shared for this study.
@@ -40,11 +45,11 @@ Use the Python environment in which the project dependencies are installed. CUDA
 # Data Preparation
 The study used ten BrainWeb T1 phantoms split by subject:
 Subjects:
-Training
+Training:
 18, 41, 44, 48, 49, 51
-Validation
+Validation:
 42, 54
-Test
+Test:
 04, 06
 
 Prepared volumes had shape (181, 256, 256) and 1 mm voxel spacing. Intensities were scaled to [0, 1], and Gaussian noise was generated at σ = 0.03, 0.06, and 0.10. The prepared data were organized by noise level, including paths such as:
@@ -65,6 +70,7 @@ Example: radius 1, σ = 0.03. Each command below is a single Windows CMD line.
 Go to your project directory in the command prompt using the command:
 
 cd "complete path for NGPS-Master"
+
 python scripts/train_adaptive_ngps.py --data-root data/brainweb/sigma_03 --config configs/adaptive_radius1_ngps_nafnet_default.yaml --output-dir runs/adaptive_sigma03_radius1_new --device cuda --save-every 1
 
 For radius 2, use configs/adaptive_radius2_ngps_nafnet_default.yaml or configs/synthetic_10epoch_radius_2.yaml (for smaller network and quick training) and a separate output directory. Inspect configuration values before a new run. 
