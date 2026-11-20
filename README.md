@@ -125,6 +125,7 @@ The project calculates PSNR and SSIM with data range 1, along with HFEN and GMSD
 
 Mean over held-out subjects 04 and 06:
 | σ |Radius|PSNR(dB)↑| SSIM ↑| HFEN ↓ | GMSD ↓ |
+
 | 0.03 | 1 | 32.787 | 0.8656 | 0.3333 | 0.0308 |
 | 0.03 | 2 | 32.405 | 0.8557 | 0.3533 | 0.0357 |
 | 0.06 | 1 | 30.444 | 0.7700 | 0.3737 | 0.0410 |
