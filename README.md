@@ -127,10 +127,15 @@ Mean over held-out subjects 04 and 06:
 | σ |Radius|PSNR(dB)↑| SSIM ↑| HFEN ↓ | GMSD ↓ |
 
 | 0.03 | 1 | 32.787 | 0.8656 | 0.3333 | 0.0308 |
+
 | 0.03 | 2 | 32.405 | 0.8557 | 0.3533 | 0.0357 |
+
 | 0.06 | 1 | 30.444 | 0.7700 | 0.3737 | 0.0410 |
+
 | 0.06 | 2 | 30.556 | 0.7778 | 0.3928 | 0.0446 |
+
 | 0.10 | 1 | 28.240 | 0.6857 | 0.4431 | 0.0570 |
+
 | 0.10 | 2 | 28.044 | 0.6800 | 0.4494 | 0.0582 |
 
 Radius 1 generally performed better than radius 2, but radius 2 had higher PSNR and SSIM at σ = 0.06. Adaptive NGPS did not consistently outperform the comparison methods. The small test set and unmatched training configurations limit interpretation; phantom experiments do not establish clinical effectiveness.
