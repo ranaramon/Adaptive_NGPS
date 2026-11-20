@@ -30,7 +30,9 @@ Directory contents and paths are based on the project files and commands shared 
 Open Windows Command Prompt in your project directory:
 
 cd "complete path for NGPS-master"
+
 python -m pip install -r requirements.txt
+
 python -c "import torch; print('CUDA available:', torch.cuda.is_available())"
 
 Use the Python environment in which the project dependencies are installed. CUDA requires a compatible PyTorch installation and GPU. Use --device cpu if CUDA is unavailable.
